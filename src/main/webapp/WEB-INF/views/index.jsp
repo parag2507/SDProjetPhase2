@@ -64,6 +64,20 @@
 			</div>
 		</form:form>
 	</div>
+	<table>
+	<tr>
+	<td><b>Type1</b></td>
+	<td><b>Type2</b></td>
+	<td><b>Type3</b></td>
+	<td><b>Type4</b></td>
+	</tr>
+	<tr>
+	<td><img src="<c:url value="/resources/Type1.gif" />" style="width:370px;height:350px;"/></td>
+	<td><img src="<c:url value="/resources/Type2.gif" />" style="width:370px;height:350px;"/></td>
+	<td><img src="<c:url value="/resources/Type3.gif" />" style="width:370px;height:350px;"/></td>
+	<td><img src="<c:url value="/resources/Type4.gif" />" style="width:370px;height:350px;"/></td>
+	</tr>
+	</table>
 
 </body>
 
