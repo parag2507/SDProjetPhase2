@@ -46,6 +46,12 @@
 					<label class="fs-field-label fs-anim-upper" for="height" data-info="Please enter the height of the wooden plank">Whats the Height?</label>
 					<form:input class="fs-anim-lower" path="height" id="dimHeight" name="dimHeight" type="number" placeholder="10" required="true"/>
 				</li>
+				<li data-input-trigger>
+					<label class="fs-field-label fs-anim-upper" data-info="Please select a unit in which the result is required">Choose a unit.</label>
+					<form:select class="cs-select cs-skin-boxes fs-anim-lower" path="unit" id="unit">
+						<form:options items="${unitList}" /></td>
+					</form:select>
+				</li>
 			</ol><!-- /fs-fields -->
 
 
