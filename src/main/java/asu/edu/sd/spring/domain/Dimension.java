@@ -5,6 +5,7 @@ public class Dimension {
 	private double width;
 	private double height;
 	private String unit;
+	private String shape;
 	
 	public double getLength() {
 		return length;
@@ -29,6 +30,12 @@ public class Dimension {
 	}
 	public void setHeight(double height) {
 		this.height = height;
+	}
+	public String getShape() {
+		return shape;
+	}
+	public void setShape(String shape) {
+		this.shape = shape;
 	}
 	
 }
