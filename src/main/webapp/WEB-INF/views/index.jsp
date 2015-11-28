@@ -30,6 +30,34 @@
 
 <body>
 
+	<div class="container">
+
+		<div class="fs-form-wrap" id="fs-form-wrap">
+		<form:form id="myform" method="POST"
+			action="${pageContext.servletContext.contextPath}/processDimension" 
+			class="fs-form fs-form-full" autocomplete="off">
+			<ol class="fs-fields">
+				<li>
+					<label class="fs-field-label fs-anim-upper" for="length" data-info="Please enter the length of the wooden plank">Whats the Length</label>
+					<form:input class="fs-anim-lower" path="length" id="dimLength" name="dimLength" type="number" placeholder="10" required/>
+				</li>
+				<li>
+					<label class="fs-field-label fs-anim-upper" for="width" data-info="Please enter the width of the wooden plank">Whats the Width?</label>
+					<form:input class="fs-anim-lower" path="width" id="dimWidth" name="dimWidth" type="number" placeholder="10" required/>
+				</li>
+				<li>
+					<label class="fs-field-label fs-anim-upper" for="height" data-info="Please enter the height of the wooden plank">Whats the Height?</label>
+					<form:input class="fs-anim-lower" path="height" id="dimHeight" name="dimHeight" type="number" placeholder="10" required/>
+				</li>
+			</ol><!-- /fs-fields -->
+
+
+		</form:form>
+
+		</div>
+
+	</div>
+
 	<h2 align="center" style="padding-bottom: 8px">Cube processing</h2>
 	<div align="center" class="container"
 		style="padding-right: 30%; padding-left: 30%">
