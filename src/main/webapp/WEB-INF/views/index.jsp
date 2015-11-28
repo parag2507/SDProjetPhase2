@@ -52,11 +52,8 @@
 						<form:options items="${unitList}" /></td>
 					</form:select>
 				</li>
-				<li>
-					<form:button style="width:inherit;margin-bottom:3px"
-									type="submit" class="form-control" id="dimSubmit">Process</form:button></td>
-				</li>
 			</ol><!-- /fs-fields -->
+			<form:button class="fs-submit" id="dimSubmit" type="submit">Process</form:button>
 		</form:form>
 
 		</div>
