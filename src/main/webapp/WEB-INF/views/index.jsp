@@ -11,18 +11,15 @@
 <meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
 <meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
 <meta name="author" content="Codrops" />
-<link rel="shortcut icon" href="../favicon.ico">
 
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/normalize.css" />" />
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/demo.css" />" />
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/component.css" />" />
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/cs-select.css" />" />
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/cs-skin-boxes.css" />" />
-<link href="<c:url value="/resources/NewFile.css" />" rel="stylesheet">
+<%-- <link href="<c:url value="/resources/NewFile.css" />" rel="stylesheet"> --%>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="<c:url value="/resources/js/modernizr.custom.js" />"></script>
 
 
@@ -39,15 +36,15 @@
 			<ol class="fs-fields">
 				<li>
 					<label class="fs-field-label fs-anim-upper" for="length" data-info="Please enter the length of the wooden plank">Whats the Length</label>
-					<form:input class="fs-anim-lower" path="length" id="dimLength" name="dimLength" type="number" placeholder="10" required/>
+					<form:input class="fs-anim-lower" path="length" id="dimLength" name="dimLength" type="number" placeholder="10" required="true"/>
 				</li>
 				<li>
 					<label class="fs-field-label fs-anim-upper" for="width" data-info="Please enter the width of the wooden plank">Whats the Width?</label>
-					<form:input class="fs-anim-lower" path="width" id="dimWidth" name="dimWidth" type="number" placeholder="10" required/>
+					<form:input class="fs-anim-lower" path="width" id="dimWidth" name="dimWidth" type="number" placeholder="10" required="true"/>
 				</li>
 				<li>
 					<label class="fs-field-label fs-anim-upper" for="height" data-info="Please enter the height of the wooden plank">Whats the Height?</label>
-					<form:input class="fs-anim-lower" path="height" id="dimHeight" name="dimHeight" type="number" placeholder="10" required/>
+					<form:input class="fs-anim-lower" path="height" id="dimHeight" name="dimHeight" type="number" placeholder="10" required="true"/>
 				</li>
 			</ol><!-- /fs-fields -->
 
