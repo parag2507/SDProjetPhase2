@@ -36,7 +36,7 @@ public class HomeController {
 		model.addObject("command", input);
 		model.addObject("output", outputCubes);
 		model.addObject("unitList", shapeService.getUnits());
-		
+		model.addObject("shapeType", input.getShape());
 		return model;
 	}
 	
