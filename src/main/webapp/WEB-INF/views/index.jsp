@@ -154,27 +154,50 @@
 					<div class="row">
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/CubeType1.png" />" alt="">
+								src="<c:url value="/resources/CubeType1.png" />" alt="">
 						</div>
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/Type1 base.png" />" alt="">
+								src="<c:url value="/resources/Type1 base.png" />" alt="">
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-6 col-md-6">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cubetype1_piece1.png" />" alt="">
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cubetype1_piece2.png" />" alt="">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 1 scale.png" />" alt="">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a cube</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cubetype1_piece1.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cubetype1_piece2.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 1 scale.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the cube</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -199,35 +222,57 @@
 					<div class="row">
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/CubeType2.png" />" alt="">
+								src="<c:url value="/resources/CubeType2.png" />" alt="">
 						</div>
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/Type2 base.png" />" alt="">
+								src="<c:url value="/resources/Type2 base.png" />" alt="">
 						</div>
 					</div>
+
 					<div class="row">
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
-								alt="">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
-								alt="">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a cube</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 3 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the cube</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -252,30 +297,51 @@
 					<div class="row">
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/CubeType3.png" />" alt="">
+								src="<c:url value="/resources/CubeType3.png" />" alt="">
 						</div>
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/Type3 base.png" />" alt="">
+								src="<c:url value="/resources/Type3 base.png" />" alt="">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-6 col-md-6">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 3_ piece 1.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 3_ piece 2.png" />"
-								alt="">
-						</div>
 
-					</div>
 					<div class="row">
-						<div class="col-md-12">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 3 scale.png" />" alt="">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a cube</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 3_ piece 1.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 3_ piece 2.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 3 scale.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the cube</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -300,35 +366,57 @@
 					<div class="row">
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/CubeType4.png" />" alt="">
+								src="<c:url value="/resources/CubeType4.png" />" alt="">
 						</div>
 						<div class="col-lg-6 col-mod-6">
 							<img class="img-responsive"
-							src="<c:url value="/resources/Type4 base.png" />" alt="">
+								src="<c:url value="/resources/Type4 base.png" />" alt="">
 						</div>
 					</div>
+
 					<div class="row">
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-4 col-md-4">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
-								alt="">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<img class="img-responsive"
-								src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
-								alt="">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a cube</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 3 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the cube</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -349,7 +437,49 @@
 					</button>
 					<h4 class="modal-title" id="myModalLabel">Square Pyramid</h4>
 				</div>
-				<div class="modal-body"></div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 col-mod-12">
+							<img class="img-responsive"
+								src="<c:url value="/resources/Squarebasepyramid.png" />" alt="">
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a Square Pyramid</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the Square pyramid</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</div>
@@ -369,22 +499,52 @@
 				</div>
 				<div class="modal-body">
 					<div class="row">
-						<div class="col-lg-6 col-md-6">
+						<div class="col-lg-12 col-mod-12">
 							<img class="img-responsive"
-								src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
-								alt="">
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<img class="img-responsive"
-								src="<c:url value="/resources/triangular base pyramid_piece 2.png" />"
+								src="<c:url value="/resources/Trianglebasedpyramid.png" />"
 								alt="">
 						</div>
 
 					</div>
 					<div class="row">
-						<div class="col-md-12">
-							<img class="img-responsive"
-								src="<c:url value="/resources/Triangular base instructions.png" />" alt="">
+						<div class="col-lg-12 col-mod-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><h5>Wooden Piece dimension</h5></td>
+										<td>"${length} inches * "${height} inches * "${width}
+											inches"</td>
+									</tr>
+									<tr>
+										<td><h5>Number of pieces to make a Triangular
+												Pyramid</h5></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 1 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Piece 2 Dimension</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/triangular base pyramid_piece 2.png" />"
+											alt=""></td>
+									</tr>
+
+									<tr>
+										<td><h5>Marking on the plank</h5></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/Triangular base instructions.png" />"
+											alt=""></td>
+									</tr>
+									<tr>
+										<td><h5>Volume of the Triangular pyramid</h5></td>
+										<td>x</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
