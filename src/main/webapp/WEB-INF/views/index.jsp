@@ -167,21 +167,29 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
+									</tr>
+
+									<tr>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<table>
+												<td>
+												<tr>
+													<img class="img-responsive"
+														src="<c:url value="/resources/cubetype1_piece1.png" />"
+														alt="">
+												</tr>
+												<tr>Piece length = <c:out value="${shape[0].pieces[0].bottomLength}"/></tr>
+												</td>
+												<td>Number of pieces =</td>
+
+											</table>
+										</td>
 									</tr>
 									<tr>
-										<td><h5>Number of pieces to make a cube</h5></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cubetype1_piece1.png" />"
-											alt=""></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
+										<td><h5>Piece 2 Description</h5></td>
 										<td><img class="img-responsive"
 											src="<c:url value="/resources/cubetype1_piece2.png" />"
 											alt=""></td>

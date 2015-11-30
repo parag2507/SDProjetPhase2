@@ -1,28 +1,22 @@
 package asu.edu.sd.spring.domain;
 
 public class Piece {
-	private double length;
-	private double width;
-	private double height;
+	
+	private double topLength;
+	private double bottomLength;
 	private int count;
 	
-	public double getLength() {
-		return length;
+	public double getTopLength() {
+		return topLength;
 	}
-	public void setLength(double length) {
-		this.length = length;
+	public void setTopLength(double topLength) {
+		this.topLength = topLength;
 	}
-	public double getWidth() {
-		return width;
+	public double getBottomLength() {
+		return bottomLength;
 	}
-	public void setWidth(double width) {
-		this.width = width;
-	}
-	public double getHeight() {
-		return height;
-	}
-	public void setHeight(double height) {
-		this.height = height;
+	public void setBottomLength(double bottomLength) {
+		this.bottomLength = bottomLength;
 	}
 	public int getCount() {
 		return count;
@@ -30,5 +24,5 @@ public class Piece {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	
+		
 }

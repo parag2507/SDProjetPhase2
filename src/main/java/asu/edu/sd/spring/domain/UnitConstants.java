@@ -1,6 +1,8 @@
 package asu.edu.sd.spring.domain;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UnitConstants {
@@ -11,7 +13,16 @@ public class UnitConstants {
 	public static String YARDS = "yards";
 
 	public static Map<String, Map<String, Double>> CONVERSIONMAP = populateConversionMap();
-
+	
+	public static List<String> unitsList = new ArrayList<String>();
+	
+	static{
+		unitsList.add(METER);
+		unitsList.add(CENTIMETER);
+		unitsList.add(INCHES);
+		unitsList.add(YARDS);
+	}
+	
 	private static Map<String, Map<String, Double>> populateConversionMap() {
 
 		Map<String, Map<String, Double>> conversionMap = new HashMap<>();

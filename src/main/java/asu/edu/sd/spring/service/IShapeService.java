@@ -1,13 +1,11 @@
 package asu.edu.sd.spring.service;
 
-import java.util.List;
-
-import asu.edu.sd.spring.domain.Cube;
 import asu.edu.sd.spring.domain.Dimension;
+import asu.edu.sd.spring.domain.Shape;
+
 
 public interface IShapeService {
-	
-	Cube[] getOutput(Dimension input);
-	List<String> getUnits();
+
+	Shape[] getShape(String string,Dimension dimension);
 	
 }
