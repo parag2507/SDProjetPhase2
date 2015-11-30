@@ -72,6 +72,8 @@ public class ShapeService implements IShapeService {
 		shape.addPiece(piece1);
 		shape.addPiece(piece2);
 		
+		shape.setVolume(Math.pow(piece2.getBottomLength(), 3)/8.49);
+		
 		pyramid[0] = shape;
 		return pyramid;
 	}
@@ -107,7 +109,15 @@ public class ShapeService implements IShapeService {
 		shape.addPiece(piece1);
 		shape.addPiece(piece2);
 		shape.addPiece(piece3);
-
+		
+		double slantHeight = piece3.getBottomLength() + dimension.getHeight();
+		
+		double height = Math.sqrt(Math.pow(slantHeight, 2) - (Math.pow(piece2.getBottomLength(), 2)/2));
+		
+		double volume = Math.pow(piece2.getBottomLength(),2)*height/3;
+		
+		shape.setVolume(volume);
+		
 		pyramid[0] = shape;
 
 		return pyramid;
