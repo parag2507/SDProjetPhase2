@@ -174,25 +174,58 @@
 									<tr>
 										<td><h5>Piece 1 Description</h5></td>
 										<td>
-											<table>
-												<td>
-												<tr>
-													<img class="img-responsive"
-														src="<c:url value="/resources/cubetype1_piece1.png" />"
-														alt="">
-												</tr>
-												<tr>Piece length = <c:out value="${shape[0].pieces[0].bottomLength}"/></tr>
-												</td>
-												<td>Number of pieces =</td>
-
-											</table>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cubetype1_piece1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
 										<td><h5>Piece 2 Description</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cubetype1_piece2.png" />"
-											alt=""></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cubetype1_piece2.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
@@ -202,7 +235,7 @@
 									</tr>
 									<tr>
 										<td><h5>Volume of the cube</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[0].volume}" /></td>
 									</tr>
 								</table>
 							</div>
@@ -244,30 +277,95 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
 									</tr>
+
 									<tr>
-										<td><h5>Number of pieces to make a cube</h5></td>
-										<td></td>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[1].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
+
 									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
-											alt=""></td>
+										<td><h5>Piece 2 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[1].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
+
 									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
-											alt=""></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 3 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
-											alt=""></td>
+										<td><h5>Piece 3 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[2].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[1].pieces[2].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[1].pieces[2].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
@@ -277,7 +375,7 @@
 									</tr>
 									<tr>
 										<td><h5>Volume of the cube</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[1].volume}" /></td>
 									</tr>
 								</table>
 							</div>
@@ -319,25 +417,67 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
+									</tr>
+
+									<tr>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[2].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 3_ piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[2].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[2].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td><h5>Number of pieces to make a cube</h5></td>
-										<td></td>
+										<td><h5>Piece 2 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[2].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 3_ piece 2.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[2].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[2].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
-									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 3_ piece 1.png" />"
-											alt=""></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 3_ piece 2.png" />"
-											alt=""></td>
-									</tr>
+
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
 										<td><img class="img-responsive"
@@ -346,7 +486,7 @@
 									</tr>
 									<tr>
 										<td><h5>Volume of the cube</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[2].volume}" /></td>
 									</tr>
 								</table>
 							</div>
@@ -388,31 +528,98 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
 									</tr>
+
 									<tr>
-										<td><h5>Number of pieces to make a cube</h5></td>
-										<td></td>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[3].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
+
 									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
-											alt=""></td>
+										<td><h5>Piece 2 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[3].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
+
 									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
-											alt=""></td>
+										<td><h5>Piece 3 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[2].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[3].pieces[2].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[3].pieces[2].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
-									<tr>
-										<td><h5>Piece 3 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
-											alt=""></td>
-									</tr>
+
+
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
 										<td><img class="img-responsive"
@@ -421,7 +628,7 @@
 									</tr>
 									<tr>
 										<td><h5>Volume of the cube</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[3].volume}" /></td>
 									</tr>
 								</table>
 							</div>
@@ -459,29 +666,107 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
-									</tr>
-									<tr>
-										<td><h5>Number of pieces to make a Square Pyramid</h5></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
-										<td></td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
 									</tr>
 
 									<tr>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td><h5>Piece 2 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td><h5>Piece 3 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[2].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[2].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[2].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+
+									<tr>
 										<td><h5>Marking on the plank</h5></td>
-										<td></td>
+										<td><img class="img-responsive"
+											src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
+											alt=""></td>
 									</tr>
 									<tr>
 										<td><h5>Volume of the Square pyramid</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[0].volume}" /></td>
 									</tr>
 								</table>
 							</div>
@@ -520,25 +805,66 @@
 								<table class="table table-bordered">
 									<tr>
 										<td><h5>Wooden Piece dimension</h5></td>
-										<td>"${length} inches * "${height} inches * "${width}
-											inches"</td>
+										<td>"${command.length} inches * "${command.width} inches
+											* "${command.height} inches"</td>
+									</tr>
+
+
+									<tr>
+										<td><h5>Piece 1 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[0].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[0].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td><h5>Number of pieces to make a Triangular
-												Pyramid</h5></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 1 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
-											alt=""></td>
-									</tr>
-									<tr>
-										<td><h5>Piece 2 Dimension</h5></td>
-										<td><img class="img-responsive"
-											src="<c:url value="/resources/triangular base pyramid_piece 2.png" />"
-											alt=""></td>
+										<td><h5>Piece 2 Description</h5></td>
+										<td>
+											<div class="row">
+												<div class="col-lg-8 col-mod-8">
+													<figure>
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].topLength}" />
+														</figcaption>
+														<img class="img-responsive"
+															src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
+															alt="">
+														<figcaption>
+															Piece length =
+															<c:out value="${shape[0].pieces[1].bottomLength}" />
+														</figcaption>
+													</figure>
+												</div>
+												<div class="col-lg-4 col-mod-4">
+													<h5>
+														Number of pieces =
+														<c:out value="${shape[0].pieces[1].count}" />
+													</h5>
+												</div>
+											</div>
+										</td>
 									</tr>
 
 									<tr>
@@ -549,7 +875,7 @@
 									</tr>
 									<tr>
 										<td><h5>Volume of the Triangular pyramid</h5></td>
-										<td>x</td>
+										<td><c:out value="${shape[0].volume}" /></td>
 									</tr>
 								</table>
 							</div>
