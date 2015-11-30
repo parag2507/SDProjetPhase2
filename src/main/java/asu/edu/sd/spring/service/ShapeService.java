@@ -72,6 +72,7 @@ public class ShapeService implements IShapeService {
 		shape.addPiece(piece1);
 		shape.addPiece(piece2);
 		
+		pyramid[0] = shape;
 		return pyramid;
 	}
 

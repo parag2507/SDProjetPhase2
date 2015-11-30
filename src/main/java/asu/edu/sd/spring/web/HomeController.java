@@ -34,7 +34,7 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("index");
 		
 		Shape[] outputShape = shapeService.getShape(input.getShape(),input);
-		
+	
 		model.addObject("command", input);
 		model.addObject("unitList", UnitConstants.unitsList);
 		model.addObject("shapeType", input.getShape());
