@@ -4,6 +4,12 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.ArrayRealVector;
+import org.apache.commons.math3.linear.DecompositionSolver;
+import org.apache.commons.math3.linear.LUDecomposition;
+import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.linear.RealVector;
 import org.springframework.stereotype.Service;
 
 import asu.edu.sd.spring.domain.Dimension;
@@ -39,22 +45,69 @@ public class ShapeService implements IShapeService {
 	}
 
 	private Shape[] getTriangularPyramid(Dimension dimension) {
+		
 		Shape[] pyramid = new Shape[1];
+		 
 		
-		Piece piece = new Piece();
+		RealMatrix coefficients = new Array2DRowRealMatrix(new double[][] {
+				{ 1, -1 }, { 3, 3 } }, false);
+
+		DecompositionSolver solver = new LUDecomposition(coefficients)
+				.getSolver();
 		
-		piece.setBottomLength(dimension.getLength()/6);
-		piece.setTopLength(dimension.getLength()-((2*dimension.getWidth())/Math.sqrt(3.0)));
-		piece.setCount(6);
-		
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(),dimension.getLength()}, false);
+		RealVector solution = solver.solve(constants);
+
+		Piece piece1 = new Piece();
+		piece1.setBottomLength(solution.getEntry(0));
+		piece1.setTopLength(solution.getEntry(0) - ((2*dimension.getWidth())/Math.sqrt(3)));
+		piece1.setCount(3);
+
+		Piece piece2 = new Piece();
+		piece2.setBottomLength(solution.getEntry(1));
+		piece2.setTopLength(solution.getEntry(1) - ((2*dimension.getWidth())/Math.sqrt(3)));
+		piece2.setCount(3);
+
 		Shape shape = new Shape();
-		shape.addPiece(piece);
-		pyramid[0] = shape;
+		shape.addPiece(piece1);
+		shape.addPiece(piece2);
+		
 		return pyramid;
 	}
 
 	private Shape[] getSquarePyramid(Dimension dimension) {
 		Shape[] pyramid = new Shape[1];
+		
+		RealMatrix coefficients = new Array2DRowRealMatrix(new double[][] {
+				{ 0, -1.22, 1 }, { 1, -1, 0 }, { 2, 2, 4 } }, false);
+		DecompositionSolver solver = new LUDecomposition(coefficients)
+				.getSolver();
+		
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(), -2*dimension.getWidth(), dimension.getLength() }, false);
+		RealVector solution = solver.solve(constants);
+		
+		Piece piece1 = new Piece();
+		piece1.setBottomLength(solution.getEntry(0));
+		piece1.setTopLength(solution.getEntry(0));
+		piece1.setCount(2);
+
+		Piece piece2 = new Piece();
+		piece2.setBottomLength(solution.getEntry(1));
+		piece2.setTopLength(solution.getEntry(1));
+		piece2.setCount(2);
+		
+		Piece piece3 = new Piece();
+		piece3.setBottomLength(solution.getEntry(2));
+		piece3.setTopLength(solution.getEntry(2) - ((2*dimension.getWidth())/Math.sqrt(3)));
+		piece3.setCount(4);
+
+		
+		Shape shape = new Shape();
+		shape.addPiece(piece1);
+		shape.addPiece(piece2);
+		shape.addPiece(piece3);
+
+		pyramid[0] = shape;
 
 		return pyramid;
 	}
