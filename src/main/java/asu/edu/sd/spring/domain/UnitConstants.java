@@ -13,16 +13,16 @@ public class UnitConstants {
 	public static String YARDS = "yards";
 
 	public static Map<String, Map<String, Double>> CONVERSIONMAP = populateConversionMap();
-	
+
 	public static List<String> unitsList = new ArrayList<String>();
-	
-	static{
+
+	static {
 		unitsList.add(METER);
 		unitsList.add(CENTIMETER);
 		unitsList.add(INCHES);
 		unitsList.add(YARDS);
 	}
-	
+
 	private static Map<String, Map<String, Double>> populateConversionMap() {
 
 		Map<String, Map<String, Double>> conversionMap = new HashMap<>();
@@ -37,8 +37,8 @@ public class UnitConstants {
 		Map<String, Double> centimeterMap = new HashMap<String, Double>();
 		centimeterMap.put(METER, (double) 0.01);
 		centimeterMap.put(CENTIMETER, (double) 1);
-		centimeterMap.put(INCHES, (double) 0.39);
-		centimeterMap.put(YARDS, (double) 0.01);
+		centimeterMap.put(INCHES, (double) 0.393701);
+		centimeterMap.put(YARDS, (double) 0.010936);
 		conversionMap.put(CENTIMETER, centimeterMap);
 
 		Map<String, Double> inchesMap = new HashMap<String, Double>();
@@ -56,6 +56,18 @@ public class UnitConstants {
 		conversionMap.put(YARDS, yardsMap);
 
 		return conversionMap;
+	}
+
+	public static double getConversionFactor(String unit) {
+		
+		Map<String, Double> unitMap = CONVERSIONMAP.get(unit);
+		return unitMap.get(CENTIMETER);
+	}
+
+	public static double getInverseConversionFactor(String unit) {
+
+		Map<String, Double> centimeterMap = CONVERSIONMAP.get(CENTIMETER);
+		return centimeterMap.get(unit);
 	}
 
 }

@@ -1,11 +1,21 @@
 package asu.edu.sd.spring.domain;
 
-public class Dimension {
+public class Dimension implements Cloneable{
 	private double length;
 	private double width;
 	private double height;
 	private String unit;
 	private String shape;
+	
+	public Object clone() {
+        try {
+            return (Dimension)super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+           return null;
+        }
+    }
+
 	
 	public double getLength() {
 		return length;

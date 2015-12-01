@@ -1,9 +1,5 @@
 package asu.edu.sd.spring.service;
 
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
-
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.DecompositionSolver;
@@ -16,19 +12,9 @@ import asu.edu.sd.spring.domain.Dimension;
 import asu.edu.sd.spring.domain.Equations;
 import asu.edu.sd.spring.domain.Piece;
 import asu.edu.sd.spring.domain.Shape;
-import asu.edu.sd.spring.domain.UnitConstants;
 
 @Service
 public class ShapeService implements IShapeService {
-
-	@PostConstruct
-	public void init() {
-		Map<String, Map<String, Double>> conversionMap = UnitConstants.CONVERSIONMAP;
-	}
-
-	private double convertUnits(String inputUnit, String outputUnit) {
-		return (UnitConstants.CONVERSIONMAP.get(inputUnit).get(outputUnit));
-	}
 
 	@Override
 	public Shape[] getShape(String shapeType, Dimension dimension) {
@@ -55,7 +41,7 @@ public class ShapeService implements IShapeService {
 		DecompositionSolver solver = new LUDecomposition(coefficients)
 				.getSolver();
 		
-		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(),dimension.getLength()}, false);
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(),(dimension.getLength() + ( (4 / Math.sqrt(3)) * dimension.getWidth() ) + (Math.sqrt(3) * dimension.getWidth()) )}, false);
 		RealVector solution = solver.solve(constants);
 
 		Piece piece1 = new Piece();
@@ -86,7 +72,7 @@ public class ShapeService implements IShapeService {
 		DecompositionSolver solver = new LUDecomposition(coefficients)
 				.getSolver();
 		
-		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(), -2*dimension.getWidth(), dimension.getLength() }, false);
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(), -2*dimension.getWidth(), ( dimension.getLength() + ( (2*Math.sqrt(3)) * dimension.getWidth()) + (dimension.getWidth()/Math.sqrt(3)) ) }, false);
 		RealVector solution = solver.solve(constants);
 		
 		Piece piece1 = new Piece();
