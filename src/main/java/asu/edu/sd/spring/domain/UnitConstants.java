@@ -37,8 +37,8 @@ public class UnitConstants {
 		Map<String, Double> centimeterMap = new HashMap<String, Double>();
 		centimeterMap.put(METER, (double) 0.01);
 		centimeterMap.put(CENTIMETER, (double) 1);
-		centimeterMap.put(INCHES, (double) 0.39);
-		centimeterMap.put(YARDS, (double) 0.01);
+		centimeterMap.put(INCHES, (double) 0.393701);
+		centimeterMap.put(YARDS, (double) 0.010936);
 		conversionMap.put(CENTIMETER, centimeterMap);
 
 		Map<String, Double> inchesMap = new HashMap<String, Double>();

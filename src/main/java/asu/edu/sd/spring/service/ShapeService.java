@@ -41,7 +41,7 @@ public class ShapeService implements IShapeService {
 		DecompositionSolver solver = new LUDecomposition(coefficients)
 				.getSolver();
 		
-		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(),dimension.getLength()}, false);
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(),(dimension.getLength() + ( (4 / Math.sqrt(3)) * dimension.getWidth() ) + (Math.sqrt(3) * dimension.getWidth()) )}, false);
 		RealVector solution = solver.solve(constants);
 
 		Piece piece1 = new Piece();
@@ -72,7 +72,7 @@ public class ShapeService implements IShapeService {
 		DecompositionSolver solver = new LUDecomposition(coefficients)
 				.getSolver();
 		
-		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(), -2*dimension.getWidth(), dimension.getLength() }, false);
+		RealVector constants = new ArrayRealVector(new double[] { -dimension.getHeight(), -2*dimension.getWidth(), ( dimension.getLength() + ( (2*Math.sqrt(3)) * dimension.getWidth()) + (dimension.getWidth()/Math.sqrt(3)) ) }, false);
 		RealVector solution = solver.solve(constants);
 		
 		Piece piece1 = new Piece();

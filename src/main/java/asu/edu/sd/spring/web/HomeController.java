@@ -1,5 +1,6 @@
 package asu.edu.sd.spring.web;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,24 +52,33 @@ public class HomeController {
 		double inverseConversionFactor = UnitConstants
 				.getInverseConversionFactor(inputUnit);
 
-		for (Shape shape : outputShape) {
+		Shape[] finalOutputShape = new Shape[outputShape.length];
+		
+		for (int i = 0; i < outputShape.length; i++) {
 
-			List<Piece> pieces = shape.getPieces();
-
+			Shape shape = new Shape();
+			List<Piece> pieces = outputShape[i].getPieces();
 			for (Piece piece : pieces) {
-				piece.setBottomLength(Math.abs(round(inverseConversionFactor
+				Piece newPiece = new Piece();
+				newPiece.setBottomLength(Math.abs(round(inverseConversionFactor
 						* piece.getBottomLength(), 1)));
-				piece.setTopLength(Math.abs(round(inverseConversionFactor
+				newPiece.setTopLength(Math.abs(round(inverseConversionFactor
 						* piece.getTopLength(), 1)));
+				newPiece.setCount(piece.getCount());
+				shape.addPiece(newPiece);
 			}
-			shape.setVolume(Math.abs(round(Math.pow(inverseConversionFactor, 3)
-					* shape.getVolume(), 1)));
+			
+			shape.setVolume(Math.abs(round(
+					Math.pow(inverseConversionFactor, 3)
+					* outputShape[i].getVolume(), 1)));
+			
+			finalOutputShape[i] = shape;
 		}
 
 		model.addObject("command", input);
 		model.addObject("unitList", UnitConstants.unitsList);
 		model.addObject("shapeType", input.getShape());
-		model.addObject("shape", outputShape);
+		model.addObject("shape", finalOutputShape);
 		return model;
 	}
 
