@@ -51,7 +51,7 @@ public class ShapeService implements IShapeService {
 
 		Piece piece2 = new Piece();
 		piece2.setBottomLength(solution.getEntry(1));
-		piece2.setTopLength(solution.getEntry(1) - ((2*dimension.getWidth())/Math.sqrt(3)));
+		piece2.setTopLength(solution.getEntry(1) - ( dimension.getWidth() / Math.sqrt(3) ) - (dimension.getWidth() * Math.sqrt(3)));
 		piece2.setCount(3);
 
 		Shape shape = new Shape();
@@ -87,7 +87,7 @@ public class ShapeService implements IShapeService {
 		
 		Piece piece3 = new Piece();
 		piece3.setBottomLength(solution.getEntry(2));
-		piece3.setTopLength(solution.getEntry(2) - ((2*dimension.getWidth())/Math.sqrt(3)));
+		piece3.setTopLength(solution.getEntry(2) - ( dimension.getWidth() / Math.sqrt(3) ) - (dimension.getWidth() * Math.sqrt(3)));
 		piece3.setCount(4);
 
 		
@@ -121,12 +121,15 @@ public class ShapeService implements IShapeService {
 		double a = 1, b = -1, u = -(w + h);
 		double c = 8, d = 4, v = l;
 		cubes[0] = Equations.twoVariableEquationShape(a, b, c, d, u, v);
-
+		cubes[0].setVolume(Math.pow( cubes[0].getPieces().get(1).getBottomLength(), 3));
 		// Type2 and Type 4
 		Shape cubeType24 = Equations.threeVariableEquationShape(l,w,h);
 		cubes[1] = cubeType24;
 		cubes[3] = cubeType24;
-
+		
+		cubes[1].setVolume(Math.pow( cubes[1].getPieces().get(2).getBottomLength(), 3));
+		cubes[3].setVolume(Math.pow( cubes[3].getPieces().get(2).getBottomLength(), 3));
+		
 		// Type3
 
 		a = 1;
@@ -136,7 +139,7 @@ public class ShapeService implements IShapeService {
 		d = 4;
 		v = l;
 		cubes[2] = Equations.twoVariableEquationShape(a, b, c, d, u, v);
-
+		cubes[2].setVolume(Math.pow( ( cubes[2].getPieces().get(0).getBottomLength() + dimension.getWidth() ), 3));
 		return cubes;
 	}
 }

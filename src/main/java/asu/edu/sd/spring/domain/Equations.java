@@ -36,7 +36,7 @@ public class Equations {
 		Shape shape = new Shape();
 		shape.addPiece(piece1);
 		shape.addPiece(piece2);
-
+		
 		return shape;
 	}
 
