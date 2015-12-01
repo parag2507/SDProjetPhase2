@@ -127,7 +127,7 @@
 						class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4 col-xs-6 thumb">
 						<a data-target="#spyramid" data-toggle="modal" class="thumbnail"
 							href="#spyramid"> <img class="img-responsive"
-							src="<c:url value="/resources/Squarebasepyramid.png" />" alt="">
+							src="<c:url value="/resources/Square base pyramid.png" />" alt="">
 						</a>
 						<h3>Square Base Pyramid</h3>
 					</div>
@@ -669,7 +669,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-mod-12">
 							<img class="img-responsive"
-								src="<c:url value="/resources/Squarebasepyramid.png" />" alt="">
+								src="<c:url value="/resources/Square base pyramid.png" />" alt="">
 						</div>
 
 					</div>
@@ -695,7 +695,7 @@
 															<c:out value="${shape[0].pieces[0].topLength}" />
 														</figcaption>
 														<img class="img-responsive"
-															src="<c:url value="/resources/cube type 2 &4_ piece 1.png" />"
+															src="<c:url value="/resources/square_base_pyramid_piece 1.png" />"
 															alt="">
 														<figcaption>
 															bottom length =
@@ -724,7 +724,7 @@
 															<c:out value="${shape[0].pieces[1].topLength}" />
 														</figcaption>
 														<img class="img-responsive"
-															src="<c:url value="/resources/cube type 2 &4_ piece 2.png" />"
+															src="<c:url value="/resources/square_base_pyramid_piece 2.png" />"
 															alt="">
 														<figcaption>
 															bottom length =
@@ -753,7 +753,7 @@
 															<c:out value="${shape[0].pieces[2].topLength}" />
 														</figcaption>
 														<img class="img-responsive"
-															src="<c:url value="/resources/cube type 2 &4_ piece 3.png" />"
+															src="<c:url value="/resources/square_base_pyramid_piece 3.png" />"
 															alt="">
 														<figcaption>
 															bottom length =
@@ -775,7 +775,7 @@
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
 										<td><img class="img-responsive"
-											src="<c:url value="/resources/cube type 2 and 4 scale.png" />"
+											src="<c:url value="/resources/Square base pyramid scale.png" />"
 											alt=""></td>
 									</tr>
 									<tr>
@@ -836,7 +836,7 @@
 															<c:out value="${shape[0].pieces[0].topLength}" />
 														</figcaption>
 														<img class="img-responsive"
-															src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
+															src="<c:url value="/resources/triangle_base_pyramid_piece 1.png" />"
 															alt="">
 														<figcaption>
 															bottom length =
@@ -864,7 +864,7 @@
 															<c:out value="${shape[0].pieces[1].topLength}" />
 														</figcaption>
 														<img class="img-responsive"
-															src="<c:url value="/resources/triangular base pyramid_piece 1.png" />"
+															src="<c:url value="/resources/triangle_base_pyramid_piece 2.png" />"
 															alt="">
 														<figcaption>
 															bottom length =
@@ -885,7 +885,7 @@
 									<tr>
 										<td><h5>Marking on the plank</h5></td>
 										<td><img class="img-responsive"
-											src="<c:url value="/resources/Triangular base instructions.png" />"
+											src="<c:url value="/resources/Triangle base pyramid scale.png" />"
 											alt=""></td>
 									</tr>
 									<tr>
