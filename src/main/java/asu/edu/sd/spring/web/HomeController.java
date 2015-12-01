@@ -23,7 +23,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home() {
-		
+
 		ModelAndView model = new ModelAndView("index");
 		model.addObject("command", new Dimension());
 		model.addObject("unitList", UnitConstants.unitsList);
@@ -31,37 +31,54 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/processDimension")
-	public ModelAndView processDimension(@ModelAttribute("SpringWeb") Dimension input
-			) {
-		
+	public ModelAndView processDimension(
+			@ModelAttribute("SpringWeb") Dimension input) {
+
 		ModelAndView model = new ModelAndView("index");
-		
-		Shape[] outputShape = shapeService.getShape(input.getShape(),input);
-		
-		for(Shape shape : outputShape){
-			
+
+		Dimension dummy = (Dimension) input.clone();
+
+		String inputUnit = input.getUnit();
+		double conversionFactor = UnitConstants.getConversionFactor(inputUnit);
+
+		dummy.setHeight(input.getHeight() * conversionFactor);
+		dummy.setLength(input.getLength() * conversionFactor);
+		dummy.setWidth(input.getWidth() * conversionFactor);
+		dummy.setUnit(UnitConstants.CENTIMETER);
+
+		Shape[] outputShape = shapeService.getShape(dummy.getShape(), dummy);
+
+		double inverseConversionFactor = UnitConstants
+				.getInverseConversionFactor(inputUnit);
+
+		for (Shape shape : outputShape) {
+
 			List<Piece> pieces = shape.getPieces();
-			
-			for(Piece piece:pieces){
-				piece.setBottomLength(Math.abs(round(piece.getBottomLength(),1)));
-				piece.setTopLength(Math.abs(round(piece.getTopLength(),1)));
+
+			for (Piece piece : pieces) {
+				piece.setBottomLength(Math.abs(round(inverseConversionFactor
+						* piece.getBottomLength(), 1)));
+				piece.setTopLength(Math.abs(round(inverseConversionFactor
+						* piece.getTopLength(), 1)));
 			}
-			shape.setVolume(Math.abs(round(shape.getVolume(),1)));
+			shape.setVolume(Math.abs(round(Math.pow(inverseConversionFactor, 3)
+					* shape.getVolume(), 1)));
 		}
-		
+
 		model.addObject("command", input);
 		model.addObject("unitList", UnitConstants.unitsList);
 		model.addObject("shapeType", input.getShape());
 		model.addObject("shape", outputShape);
 		return model;
-	}	
-	
-	public static double round(double value, int places) {
-	    if (places < 0) throw new IllegalArgumentException();
+	}
 
-	    long factor = (long) Math.pow(10, places);
-	    value = value * factor;
-	    long tmp = Math.round(value);
-	    return (double) tmp / factor;
+	public static double round(double value, int places) {
+		if (places < 0)
+			throw new IllegalArgumentException();
+
+		long factor = (long) Math.pow(10, places);
+		value = value * factor;
+		long tmp = Math.round(value);
+		return (double) tmp / factor;
 	}
 }
